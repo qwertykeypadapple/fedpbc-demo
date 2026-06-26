@@ -4,6 +4,16 @@ export function Masthead() {
   return (
     <header className="masthead">
       <div className="wrap">
+        <a
+          className="walkthrough-badge"
+          href="https://federation-quest.onrender.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="wb-eyebrow">▶ Prefer to play?</span>
+          <span className="wb-text">Understand this by an interactive walkthrough</span>
+          <span className="wb-arrow">Launch the quest →</span>
+        </a>
         <p className="eyebrow">Interactive companion · Federated Learning</p>
         <h1>Why a one-line change beats FedAvg when connections are unreliable</h1>
         <p className="lead muted">

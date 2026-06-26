@@ -73,9 +73,62 @@ strong { font-weight: 700; }
 
 /* ---------- hero / header ---------- */
 .masthead {
+  position: relative;
   background: linear-gradient(180deg, #f4f7fb 0%, #ffffff 100%);
   border-bottom: 1px solid var(--line);
   padding: 56px 0 48px;
+}
+
+.walkthrough-badge {
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 250px;
+  padding: 13px 16px;
+  background: #fff;
+  border: 1px solid var(--line-strong);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(20, 40, 80, 0.09);
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.walkthrough-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(20, 40, 80, 0.16);
+  border-bottom-color: var(--line-strong);
+}
+.wb-eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.wb-text {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.28;
+  color: var(--ink);
+}
+.wb-arrow {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--accent);
+}
+@media (max-width: 860px) {
+  .walkthrough-badge {
+    position: static;
+    max-width: none;
+    margin: 0 0 26px;
+  }
 }
 .masthead h1 {
   font-size: 42px;
