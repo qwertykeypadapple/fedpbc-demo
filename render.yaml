@@ -1,0 +1,20 @@
+# Recommended: deploy as a Render Static Site (free, CDN-backed, no server needed).
+# In Render: New + > Blueprint, pick this repo. Render reads this file.
+#
+# (If you instead use a Node "Web Service", it will run `npm run start`, which
+#  builds and serves dist/ via `serve` — that works too, just costs a server.)
+services:
+  - type: web
+    name: fedpbc-demo
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    pullRequestPreviewsEnabled: true
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
