@@ -1,5 +1,7 @@
 # Implicit Gossiping in Federated Learning — an interactive explainer
 
+**🔗 Live demo: https://fedpbc-demo.onrender.com/**
+
 A live, in-browser walkthrough of **“Empowering Federated Learning with Implicit Gossiping:
 Mitigating Connection Unreliability Amidst Unknown and Arbitrary Dynamics”**
 (Xiang, Ioannidis, Yeh, Joe-Wong & Su, 2024 — [arXiv:2404.10091](https://arxiv.org/abs/2404.10091)).
